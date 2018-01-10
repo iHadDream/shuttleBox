@@ -2,7 +2,7 @@
 > can select three option and handle
 > depend on bootstrap
 ## use
-###html
+### html
 ``` 
 <div id="shuttleBox">
     <div style="float: left">
@@ -36,7 +36,7 @@
     <div style="clear:both"></div>
 </div>
 ```
-###js
+### js
 ``` 
 this.shuttleBox = new ShuttleBox({
     body:'#shuttleBox',
