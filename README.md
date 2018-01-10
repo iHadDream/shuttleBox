@@ -2,8 +2,8 @@
 > can select three option and handle
 > depend on bootstrap
 ## use
-### html
-``` 
+#### html
+~~~ 
 <div id="shuttleBox">
     <div style="float: left">
         <select multiple class="form-control provinces">
@@ -35,9 +35,9 @@
     </div>
     <div style="clear:both"></div>
 </div>
-```
-### js
-``` 
+~~~
+#### js
+~~~ 
 this.shuttleBox = new ShuttleBox({
     body:'#shuttleBox',
     async:false,
@@ -45,4 +45,4 @@ this.shuttleBox = new ShuttleBox({
     cityList:['美食','酒店','娱乐'],
     regionList:['海底捞','希尔顿','洗浴中心'],
 })
-```
+~~~
