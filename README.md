@@ -2,6 +2,41 @@
 > can select three option and handle
 > depend on bootstrap
 ## use
+###html
+``` 
+<div id="shuttleBox">
+    <div style="float: left">
+        <select multiple class="form-control provinces">
+
+        </select>
+    </div>
+    <div style="float: left">
+        <select multiple class="form-control operators">
+
+        </select>
+    </div>
+    <div style="float: left">
+        <!--<input type="text" id="searchNode" placeholder="搜索节点" style="display: block"/>
+        -->
+        <select multiple class="form-control nodes">
+
+        </select>
+    </div>
+    <div class="shuttle-button">
+        <a class="add">添加 =></a>
+        <a class="addAll">全选 =></a>
+        <a class="delete"><= 删除</a>
+        <a class="deleteAll"><= 清除</a>
+    </div>
+    <div style="float: right">
+        <select multiple class="form-control three-result">
+
+        </select>
+    </div>
+    <div style="clear:both"></div>
+</div>
+```
+###js
 ``` 
 this.shuttleBox = new ShuttleBox({
     body:'#shuttleBox',
