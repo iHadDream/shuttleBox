@@ -2,7 +2,12 @@
 > can select three option and handle
 > depend on bootstrap
 
+
+![demo](https://raw.githubusercontent.com/iHadDream/shuttleBox/master/demo.png)
+
 ## use
+
+
 #### html
 ~~~ html
 <div id="shuttleBox">
