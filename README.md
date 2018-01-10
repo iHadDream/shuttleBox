@@ -3,7 +3,7 @@
 > depend on bootstrap
 ## use
 #### html
-~~~ 
+~~~ html
 <div id="shuttleBox">
     <div style="float: left">
         <select multiple class="form-control provinces">
@@ -37,7 +37,7 @@
 </div>
 ~~~
 #### js
-~~~ 
+~~~ javascript
 this.shuttleBox = new ShuttleBox({
     body:'#shuttleBox',
     async:false,
