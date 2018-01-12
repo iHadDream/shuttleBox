@@ -1,0 +1,20 @@
+{
+  "name": "shuttlebox",
+  "version": "1.0.0",
+  "description": "select left option and move to right",
+  "main": "shuttleBox.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iHadDream/shuttleBox.git"
+  },
+  "author": "kevingogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iHadDream/shuttleBox/issues",
+    "email": "451436177@qq.com"
+  },
+  "homepage": "https://github.com/iHadDream/shuttleBox#readme"
+}
