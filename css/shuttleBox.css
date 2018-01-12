@@ -4,8 +4,7 @@
     border: 1px solid #ddd;
     background: #fff;
     overflow: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px auto;
 }
 #shuttleBox select{
     height : 235px;

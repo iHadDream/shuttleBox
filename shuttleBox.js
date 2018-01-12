@@ -26,7 +26,7 @@
             operators:[{name:'',value:''}],
             nodes:[{name:'',value:''}],
         };
-
+        self.str = '';
         self.initBox('.provinces',self.provinceList);
         self.initBox('.operators',self.cityList);
         self.initBox('.nodes',self.regionList);
@@ -91,12 +91,17 @@
         //添加节点
         addNodes:function (doc) {
             var self = this;
-            var str = '';
             self.body.querySelector(doc).addEventListener("click",function(e) {
                 console.log(self.doubleBoxArgs)
-                let tempName = self.doubleBoxArgs.provinces[0].name + '-' + self.doubleBoxArgs.operators[0].name + '-' + self.doubleBoxArgs.nodes[0].name
-                str += '<option>'+ tempName + '</option>';
-                self.body.querySelector('.three-result').innerHTML = str;
+                if(self.doubleBoxArgs.provinces[0].name == '' && self.doubleBoxArgs.provinces[0].name == '' && self.doubleBoxArgs.provinces[0].name == ''){
+                    alert('请先选中左侧菜单内容')
+                }else{
+                    //let tempName = self.doubleBoxArgs.provinces[0].name + '-' + self.doubleBoxArgs.operators[0].name + '-' + self.doubleBoxArgs.nodes[0].name
+                    //self.str += '<option>'+ tempName + '</option>';
+                    //self.body.querySelector('.three-result').innerHTML = self.str;
+                    self.body.querySelector('.three-result').options.add(new Option(self.doubleBoxArgs.provinces[0].name + '-' + self.doubleBoxArgs.operators[0].name + '-' + self.doubleBoxArgs.nodes[0].name));
+
+                }
             });
             //数据处理
 
@@ -117,26 +122,27 @@
                     }
                 }
                 self.body.querySelector('.three-result').innerHTML = str;
-            }.bind(this));
+                self.str = '';
+            });
 
         },
         //删除节点
         deleteNodes:function (doc) {
             var self = this;
             self.body.querySelector(doc).addEventListener("click",function(){
-                self.body.querySelector('.three-result').options.remove(this.doubleBoxArgs.deleteIndex);
-            }.bind(this));
+                if(typeof self.doubleBoxArgs.deleteIndex === 'number')
+                self.body.querySelector('.three-result').options.remove(self.doubleBoxArgs.deleteIndex);
+                self.doubleBoxArgs.deleteIndex = '';
+            });
         },
         //清除节点
         deleteAllNodes:function (doc) {
             var self = this;
             self.body.querySelector(doc).addEventListener("click",function(){
                 self.body.querySelector('.three-result').options.length = 0;
+                self.str = '';
             }.bind(this));
-
         },
-
-
 
         //选择前两栏后更新节点
         /*updateNodes:function () {
